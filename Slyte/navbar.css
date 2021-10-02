@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+.l_nav {
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 13% 0 14%;
+  height: 78px;
+  background-color: white;
+}
+
+.c_sticky {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.l_nav .c_logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+}
+.l_nav .c_links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.l_nav .c_links li {
+  list-style: none;
+}
+.l_nav .c_links a {
+  display: block;
+  font-size: 16px;
+  font-weight: lighter;
+
+  color: black;
+  text-decoration: none;
+}
+.l_nav .c_links a:hover {
+  font-weight: bolder;
+}
+.l_nav .c_links .c_active {
+  font-weight: 900;
+}
+
+#c_nav__toggle {
+  position: absolute;
+  top: -100px;
+}
+.l_nav .c_icon__burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.l_nav .c_icon__burger .c_line {
+  width: 30px;
+  height: 2px;
+  background-color: blue;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1255px) {
+  .l_nav {
+    padding: 0% 5%;
+  }
+  .l_nav.c_logo {
+    float: none;
+    width: auto;
+    transition: all 0.5s ease-in-out;
+    /* justify-content: left; */
+  }
+
+  .l_nav .c_links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 100%;
+    right: 0px;
+    top: 78px;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    display: block;
+  }
+  .l_nav .c_links a {
+    padding: 10px 50px;
+    border-bottom: 1px #444 solid;
+    font-size: 20px;
+  }
+  .l_nav :checked ~ .c_links {
+    left: 0;
+  }
+
+  .l_nav .c_icon__burger {
+    display: block;
+  }
+  .l_nav :checked ~ .c_icon__burger .c_line:nth-child(1) {
+    transform: translateY(7px) rotate(225deg);
+  }
+  .l_nav :checked ~ .c_icon__burger .c_line:nth-child(3) {
+    transform: translateY(-7px) rotate(-225deg);
+  }
+  .l_nav :checked ~ .c_icon__burger .c_line:nth-child(2) {
+    opacity: 0;
+  }
+}
