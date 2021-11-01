@@ -432,6 +432,13 @@ footer {
   margin: 10px 0;
 }
 
+@media (max-width: 768px) {
+  /* open for mobile only  */
+  .c_btn1 {
+    pointer-events: none;
+  }
+}
+
 /* responsive part  */
 @media (max-width: 100em) {
   .l_background__dot___feedback____left,
