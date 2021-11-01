@@ -459,6 +459,15 @@ footer {
     background-image: none;
   }
 }
+  .applink {
+      visibility:hidden;
+    }
+@media (max-width:786px) {
+  .applink {
+    visibility:visible;
+  }
+
+}
 
 @media (max-width: 63.125em) {
   .l_container {
