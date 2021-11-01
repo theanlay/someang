@@ -431,11 +431,13 @@ footer {
 .c_footer__box___logo p {
   margin: 10px 0;
 }
+.applink {
+  visibility:hidden;
+}
 
-@media (max-width: 768px) {
-  /* open for mobile only  */
-  .c_btn1 {
-    pointer-events: none;
+@media (max-width:786px) {
+  .applink {
+    visibility:visible;
   }
 }
 
@@ -459,15 +461,8 @@ footer {
     background-image: none;
   }
 }
-  .applink {
-      visibility:hidden;
-    }
-@media (max-width:786px) {
-  .applink {
-    visibility:visible;
-  }
 
-}
+
 
 @media (max-width: 63.125em) {
   .l_container {
